@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chat Application</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    
+    <script defer type="text/javascript" src="./assets/ts/lib/typescript.min.js"></script>
+    <script defer type="text/javascript" src="./assets/ts/lib/typescript.compile.min.js"></script>
+
+    <script defer type="text/typescript" src="./assets/ts/helper.ts"></script>
+    <script defer type="text/typescript" src="./assets/ts/script.ts"></script>
+
+</head>
+<body>
+    <h1>Chatroom Application</h1>
+
+    <h5>You are currently in room: <span>GENEREAL</span></h5>
+    
+    <form id="changeChatroom" class="form">
+        <label for="changeChatroomInput">Chatroom Name</label>
+        <input type="text" name="changeChatroomInput" id="changeChatroomInput" />
+
+        <button type="submit">Change Chatroom</button>
+    </form>
+
+    <form id="sendMessages" class="form">
+        <label for="chatroomMessages">Your Chat Messages</label>
+        <textarea name="chatroomMessages" id="chatroomMessages" cols="40" rows="20" readonly></textarea>
+
+        <label for="writeMessage">Write your Messages</label>
+        <textarea name="writeMessage" id="writeMessage" cols="20" rows="5"></textarea>
+
+        <button type="submit">send</button>
+    </form>
+</body>
+</html>

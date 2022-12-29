@@ -1,0 +1,27 @@
+html {
+    font-size: 16px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #333333;
+    background-color: #eeeeee;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.form label::after {
+    content: ":";
+}
