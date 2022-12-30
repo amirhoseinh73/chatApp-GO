@@ -14,11 +14,16 @@ func main() {
 }
 
 func setupAPI() {
+
+	manager := newManager()
+
 	http.Handle("/", http.FileServer(http.Dir("./frontend")))
+
+	http.HandleFunc("/ws", manager.serveWS)
 }
 
 func createHost() {
-	fmt.Print("server running on port 6060 normally")
+	fmt.Print("server running on port 6060 normally\n")
 	err := http.ListenAndServe(":6060", nil)
 
 	if errors.Is(err, http.ErrServerClosed) {
